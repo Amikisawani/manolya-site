@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --mp-bg: #f7f4ef;
+  --mp-bg-accent: #efe8dc;
+  --mp-ink: #141816;
+  --mp-muted: #6b6560;
+  --mp-faint: #9a938b;
+  --mp-line: #ddd4c8;
+  --mp-line-strong: #c4b8a8;
+  --mp-accent: #1f6b4a;
+  --mp-accent-hover: #18553b;
+  --mp-accent-soft: #e4f0ea;
+  --mp-warn: #9a6700;
+  --background: var(--mp-bg);
+  --foreground: var(--mp-ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-mp-bg: var(--mp-bg);
+  --color-mp-bg-accent: var(--mp-bg-accent);
+  --color-mp-ink: var(--mp-ink);
+  --color-mp-muted: var(--mp-muted);
+  --color-mp-faint: var(--mp-faint);
+  --color-mp-line: var(--mp-line);
+  --color-mp-line-strong: var(--mp-line-strong);
+  --color-mp-accent: var(--mp-accent);
+  --color-mp-accent-hover: var(--mp-accent-hover);
+  --color-mp-accent-soft: var(--mp-accent-soft);
+  --color-mp-warn: var(--mp-warn);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-syne);
+}
+
+html,
+body {
+  background-color: var(--mp-bg);
+  background-image:
+    radial-gradient(ellipse 900px 480px at 0% -10%, rgba(31, 107, 74, 0.07), transparent 60%),
+    radial-gradient(ellipse 700px 400px at 100% 0%, rgba(154, 103, 0, 0.05), transparent 55%);
+  color: var(--mp-ink);
+}
+
+body {
+  font-family: var(--font-sans), "Segoe UI", sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), "Segoe UI", sans-serif;
+  letter-spacing: -0.03em;
+}
