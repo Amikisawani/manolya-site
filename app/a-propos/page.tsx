@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "À propos",
-  description: `Histoire et mission de ${site.fullName}, officine à ${site.neighborhood}, ${site.city}.`,
+  description: `Histoire et mission de ${site.fullName}, officine à ${site.city}.`,
 };
 
 const values = [
@@ -18,7 +18,7 @@ const values = [
   },
   {
     title: "Proximité",
-    body: "Une pharmacie de quartier à Bandalungwa, pensée pour les familles de Kinshasa.",
+    body: "Une pharmacie de quartier, pensée pour les familles de Kinshasa.",
   },
 ];
 
@@ -32,10 +32,9 @@ export default function AboutPage() {
         Une officine, pas une boutique en ligne.
       </h1>
       <p className="mt-6 max-w-2xl text-lg leading-relaxed text-mp-muted">
-        {site.fullName} est une pharmacie de proximité à {site.neighborhood},{" "}
-        {site.city}. Cette vitrine présente l’officine, nos rayons et comment nous
-        joindre. La caisse, les stocks et les dossiers restent dans l’espace
-        équipe.
+        {site.fullName} est une pharmacie de proximité à {site.city}. Cette
+        vitrine présente l’officine, nos rayons et comment nous joindre. La
+        caisse, les stocks et les dossiers restent dans l’espace équipe.
       </p>
 
       <section className="mt-16 grid gap-10 border-t border-mp-line pt-12 lg:grid-cols-3">

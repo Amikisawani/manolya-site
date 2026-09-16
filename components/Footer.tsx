@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/Logo";
 import { nav, site, teamLoginUrl } from "@/lib/site";
 
 export function Footer() {
@@ -6,8 +7,8 @@ export function Footer() {
     <footer className="mt-auto border-t border-mp-line">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-12 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
         <div>
-          <div className="font-display text-3xl leading-none">{site.name}</div>
-          <p className="mt-3 max-w-sm text-sm leading-relaxed text-mp-muted">
+          <Logo href="/" />
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-mp-muted">
             {site.description}
           </p>
         </div>

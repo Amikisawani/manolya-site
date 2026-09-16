@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { nav, site, teamLoginUrl } from "@/lib/site";
+import { Logo } from "@/components/Logo";
+import { nav, teamLoginUrl } from "@/lib/site";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -17,14 +18,7 @@ export function Header() {
   return (
     <header className="border-b border-mp-line">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-5 lg:px-8">
-        <Link href="/" className="shrink-0" onClick={() => setOpen(false)}>
-          <div className="font-display text-3xl leading-none text-mp-ink">
-            {site.name}
-          </div>
-          <div className="mt-1 text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-mp-faint">
-            {site.tagline}
-          </div>
-        </Link>
+        <Logo href="/" onClick={() => setOpen(false)} />
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Navigation principale">
           {nav.map((item) => (
