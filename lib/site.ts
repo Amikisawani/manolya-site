@@ -3,9 +3,9 @@ export const teamLoginUrl = "https://manolya-pharma.site/login";
 export const site = {
   name: "Manolya",
   fullName: "Pharmacie Manolya",
-  tagline: "Pharma · Kinshasa",
+  tagline: "Pharma",
   description:
-    "Officine de proximité à Bandalungwa : conseil pharmaceutique, médicaments de qualité et accueil soigné.",
+    "Conseil pharmaceutique, médicaments de qualité et accueil soigné à Kinshasa.",
   neighborhood: "Bandalungwa",
   city: "Kinshasa",
   country: "République démocratique du Congo",

@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Produits",
-  description: `Rayons et produits disponibles à ${site.fullName}, ${site.neighborhood}.`,
+  description: `Rayons et produits disponibles à ${site.fullName}, ${site.city}.`,
 };
 
 export default function ProductsPage() {

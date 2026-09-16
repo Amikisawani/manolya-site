@@ -1,3 +1,4 @@
+import { HeroBanner } from "@/components/HeroBanner";
 import Link from "next/link";
 import { categories } from "@/lib/products";
 import { site, teamLoginUrl } from "@/lib/site";
@@ -12,42 +13,17 @@ const pillars = [
     body: "Lots, dates et disponibilité sont gérés en interne. Vous retirez à la pharmacie, pas en ligne.",
   },
   {
-    title: "Quartier Bandalungwa",
-    body: "Une officine de proximité à Kinshasa, ouverte du lundi au dimanche avec des horaires clairs.",
+    title: "Accueil de proximité",
+    body: "Une officine ouverte du lundi au dimanche, pensée pour les familles de Kinshasa.",
   },
 ];
 
 export default function HomePage() {
   return (
     <>
-      <section className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-24">
-        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mp-faint">
-          Pharmacie · {site.neighborhood}
-        </p>
-        <h1 className="font-display mt-4 max-w-3xl text-5xl leading-[1.05] text-mp-ink sm:text-7xl">
-          Le conseil d’une officine, au rythme de Kinshasa.
-        </h1>
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-mp-muted">
-          {site.fullName} accueille patients et familles à Bandalungwa : ordonnances,
-          médicaments du quotidien et écoute du pharmacien.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-3">
-          <Link
-            href="/produits"
-            className="inline-flex items-center bg-mp-accent px-5 py-2.5 text-sm font-semibold text-[#f7f4ef] transition-colors hover:bg-mp-accent-hover"
-          >
-            Voir les produits
-          </Link>
-          <Link
-            href="/contact"
-            className="inline-flex items-center border border-mp-line-strong px-5 py-2.5 text-sm font-semibold text-mp-ink transition-colors hover:border-mp-ink"
-          >
-            Nous contacter
-          </Link>
-        </div>
-      </section>
+      <HeroBanner />
 
-      <section className="border-y border-mp-line">
+      <section className="border-b border-mp-line">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 lg:grid-cols-3 lg:px-8">
           {pillars.map((pillar) => (
             <article key={pillar.title}>
@@ -108,10 +84,6 @@ export default function HomePage() {
                   <dd className="font-medium">{slot.hours}</dd>
                 </div>
               ))}
-              <div className="flex justify-between gap-6 border-b border-mp-line py-3 text-sm">
-                <dt className="text-mp-muted">Adresse</dt>
-                <dd className="font-medium">{site.address}</dd>
-              </div>
             </dl>
           </div>
           <div className="border border-mp-line bg-[rgba(255,252,247,0.72)] p-8">
